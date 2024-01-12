@@ -12,6 +12,6 @@ class LiveStreamPackage : ReactPackage {
   }
 
   override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
-    return listOf(LiveStreamViewManager())
+    return listOf(LiveStreamViewManager<Any>())
   }
 }

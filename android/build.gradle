@@ -80,6 +80,7 @@ android {
 repositories {
   mavenCentral()
   google()
+  maven { url 'https://jitpack.io' }
 }
 
 def kotlin_version = getExtOrDefault("kotlinVersion")
@@ -88,7 +89,8 @@ dependencies {
   // For < 0.71, this will be from the local maven repo
   // For > 0.71, this will be replaced by `com.facebook.react:react-android:$version` by react gradle plugin
   //noinspection GradleDynamicVersion
-  implementation "com.facebook.react:react-native:+"
+  implementation "com.facebook.react:react-android:0.73.0"
+  implementation 'com.github.shogo4405.HaishinKit~kt:haishinkit:0.12.0'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
